@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience &ndash; Matthew Anderson</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="name">Matthew Anderson</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="experience.html" class="active">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="patents.html">Patents</a>
+    </nav>
+  </aside>
+
+  <main>
+    <h1>Experience</h1>
+    <hr class="title-rule">
+
+    <h2 class="section-title">Sonos, Inc.</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <h3>Senior Embedded Software Engineer</h3>
+        <span class="date">2023 &mdash; 2026</span>
+      </div>
+      <p class="location">Santa Barbara, CA, USA / London, UK.</p>
+      <ul>
+        <li>Shipped TrueCinema with Sonos Ace; collaborated with 6+ researchers to prototype spatial audio algorithms (Python), converging on a binaural renderer design, then developed a room acoustics estimation library (C++) and Swift/Kotlin bindings.</li>
+        <li>Owned all IMU-based motion sensing and processing for the wearables roadmap &mdash; leading head-tracking calibration, activity detection &amp; classification, and vendor interfacing.</li>
+        <li>Integrated a biometric PPG sensor into a next-gen wearable by repurposing an existing I2C bus, implementing the driver, and tapping into the platform's RTOS event model, establishing the first precedent for rapid R&amp;D sensor integration on the wearable platform.</li>
+        <li>Designed and built the interface layer connecting a physical sensor pipeline to an AI sandbox, enabling researchers to prototype context-aware applications on live sensor data.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <h3>Embedded Software Engineer II</h3>
+        <span class="date">2020 &mdash; 2023</span>
+      </div>
+      <p class="location">Santa Barbara, CA, USA.</p>
+      <ul>
+        <li>Wrote a productionized peak selection algorithm (Rust) for multi-speaker audio localization, transferring mature research into a live production system.</li>
+        <li>Tech lead for a predictive playback and personalization initiative; wrote C++ application code to collect event data from 300+ households, advancing the project's Technology Readiness Level (TRL).</li>
+        <li>Modernized MATLAB beamforming workflow with object-oriented architecture and time-domain optimization, removing frequency-domain conversion overhead and improving usability for end users.</li>
+        <li>Steering committee member for Christians@Sonos Employee Resource Group.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <h3>Embedded Software Engineer, Prototyping</h3>
+        <span class="date">2019 &mdash; 2020</span>
+      </div>
+      <p class="location">Santa Barbara, CA, USA.</p>
+      <ul>
+        <li>Built a Raspberry Pi-based voice assistant proof of concept that motivated the acquisition of Snips Inc.</li>
+        <li>Ported a production multichannel Wiener filter speech pipeline into an openMHA plugin on a custom BeagleBone AI Linux kernel, creating a portable platform for real-time hearable DSP experiments.</li>
+      </ul>
+    </div>
+
+    <h2 class="section-title">Shure, Inc.</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <h3>Digital Hardware Engineering Intern</h3>
+        <span class="date">2018</span>
+      </div>
+      <p class="location">Niles, IL, USA.</p>
+      <ul>
+        <li>Avoided supply disruption of a best-selling wireless receiver by verifying and testing a substitute flash memory part.</li>
+        <li>Prototyped and validated the design of real-time clocks for refreshed wireless microphone product lines.</li>
+      </ul>
+    </div>
+
+    <h2 class="section-title">Attero Tech LLC</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <h3>Engineering Intern</h3>
+        <span class="date">2017 &mdash; 2018</span>
+      </div>
+      <p class="location">Fort Wayne, IN, USA.</p>
+      <ul>
+        <li>Optimized peripherals of an STM microcontroller package to reduce BOM and PCB power dissipation.</li>
+        <li>Performed PCB layout of test card assemblies using Altium Designer.</li>
+        <li>Executed hardware bring-up, debug, and validation of networked audio products.</li>
+      </ul>
+    </div>
+
+    <footer class="page-footer">
+      <p>&copy; 2026 Matthew Anderson</p>
+    </footer>
+  </main>
+
+</body>
+</html>
