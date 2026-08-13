@@ -1,0 +1,295 @@
+:root {
+  --sidebar-bg: #f6f6f6;
+  --border: #ddd;
+  --heading: #527bbd;
+  --link: #224b8d;
+  --text: #1a1a1a;
+  --muted: #666;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: #fff;
+  display: flex;
+  min-height: 100vh;
+  line-height: 1.55;
+}
+
+.sidebar {
+  width: 180px;
+  flex-shrink: 0;
+  background: var(--sidebar-bg);
+  padding: 2rem 1.25rem;
+  border-right: 1px solid var(--border);
+}
+
+.sidebar .name {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.sidebar nav a {
+  color: var(--link);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.sidebar nav a.active {
+  color: var(--text);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.sidebar nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem 3rem;
+  max-width: 760px;
+}
+
+h1 {
+  color: var(--heading);
+  font-size: 1.7rem;
+  margin: 0 0 0.75rem;
+}
+
+hr.title-rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 0 1.75rem;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.profile {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.photo-placeholder {
+  width: 220px;
+  height: 275px;
+  border-radius: 4px;
+  background: #d9dde3;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.profile img {
+  width: 220px;
+  height: 275px;
+  object-fit: cover;
+  object-position: left top;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.bio-lines {
+  flex: 1;
+  min-width: 0;
+}
+
+.bio-lines p {
+  margin: 0 0 0.5rem;
+}
+
+.bio-blurb {
+  margin-top: 1rem;
+  color: #333;
+}
+
+h2.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--heading);
+  font-size: 1.15rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+  margin: 0 0 1rem;
+}
+
+.company-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+.company-icon.sonos {
+  background: #1a1a1a;
+}
+
+.company-icon.shure {
+  background: #003057;
+}
+
+.company-icon.attero {
+  background: #2c7a7b;
+}
+
+.contact-block address,
+.contact-block p {
+  font-style: normal;
+  margin: 0 0 0.75rem;
+  color: #333;
+}
+
+.icon-links {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.icon-links a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.icon-links a svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.icon-links a.linkedin {
+  background: #0a66c2;
+}
+
+.icon-links a.email {
+  background: #2c3e50;
+}
+
+.icon-links a.strava {
+  background: #fc4c02;
+}
+
+.icon-links a:hover {
+  opacity: 0.85;
+  text-decoration: none;
+}
+
+.entry {
+  margin-bottom: 1.5rem;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+}
+
+.entry h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.entry h3 a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--heading);
+}
+
+.entry .date {
+  color: var(--muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.entry p {
+  margin: 0.3rem 0 0;
+  color: #333;
+}
+
+.entry p.location {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.entry ul {
+  margin: 0.3rem 0 0;
+  padding-left: 1.1rem;
+  color: #333;
+}
+
+.entry ul li {
+  margin-bottom: 0.2rem;
+}
+
+.info-block p {
+  margin: 0 0 0.6rem;
+  color: #333;
+}
+
+footer.page-footer {
+  margin-top: 3rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 640px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  main {
+    padding: 1.75rem 1.25rem;
+  }
+  .profile {
+    flex-wrap: wrap;
+  }
+}
