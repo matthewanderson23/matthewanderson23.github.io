@@ -1,9 +1,10 @@
 :root {
+  --sidebar-bg: #f6f6f6;
+  --border: #ddd;
+  --heading: #527bbd;
+  --link: #224b8d;
   --text: #1a1a1a;
   --muted: #666;
-  --bg: #fdfdfd;
-  --accent: #2b6cb0;
-  --border: #e5e5e5;
 }
 
 * {
@@ -12,58 +13,167 @@
 
 body {
   margin: 0;
-  background: var(--bg);
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-}
-
-.container {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem 3rem;
-}
-
-header h1 {
-  font-size: 2rem;
-  margin: 0 0 0.5rem;
-  letter-spacing: -0.02em;
-}
-
-.tagline {
-  color: var(--muted);
-  margin: 0 0 1.25rem;
-  font-size: 1.05rem;
-}
-
-.links {
+  background: #fff;
   display: flex;
-  gap: 1.25rem;
-  margin-bottom: 2.5rem;
+  min-height: 100vh;
+  line-height: 1.55;
 }
 
-.links a {
-  color: var(--accent);
-  text-decoration: none;
+.sidebar {
+  width: 180px;
+  flex-shrink: 0;
+  background: var(--sidebar-bg);
+  padding: 2rem 1.25rem;
+  border-right: 1px solid var(--border);
+}
+
+.sidebar .name {
+  font-weight: bold;
+  margin-bottom: 1rem;
   font-size: 0.95rem;
+  color: var(--text);
 }
 
-.links a:hover {
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.sidebar nav a {
+  color: var(--link);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.sidebar nav a.active {
+  color: var(--text);
+  font-weight: bold;
   text-decoration: underline;
 }
 
-section {
-  margin-bottom: 2.5rem;
+.sidebar nav a:hover {
+  text-decoration: underline;
 }
 
-h2 {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--muted);
+main {
+  flex: 1;
+  padding: 2.5rem 3rem;
+  max-width: 760px;
+}
+
+h1 {
+  color: var(--heading);
+  font-size: 1.7rem;
+  margin: 0 0 0.75rem;
+}
+
+hr.title-rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 0 1.75rem;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.profile {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.photo-placeholder {
+  width: 160px;
+  height: 160px;
+  border-radius: 4px;
+  background: #d9dde3;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.profile img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.bio-lines p {
+  margin: 0 0 0.5rem;
+}
+
+.bio-blurb {
+  margin-top: 1rem;
+  color: #333;
+}
+
+h2.section-title {
+  color: var(--heading);
+  font-size: 1.15rem;
   border-bottom: 1px solid var(--border);
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.25rem;
+  padding-bottom: 0.4rem;
+  margin: 0 0 1rem;
+}
+
+.contact-block address,
+.contact-block p {
+  font-style: normal;
+  margin: 0 0 0.75rem;
+  color: #333;
+}
+
+.icon-links {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.icon-links a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.icon-links a svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.icon-links a.linkedin {
+  background: #0a66c2;
+}
+
+.icon-links a.email {
+  background: #2c3e50;
+}
+
+.icon-links a.strava {
+  background: #fc4c02;
+}
+
+.icon-links a:hover {
+  opacity: 0.85;
+  text-decoration: none;
 }
 
 .entry {
@@ -90,7 +200,7 @@ h2 {
 .entry h3 a {
   color: var(--text);
   text-decoration: none;
-  border-bottom: 1px solid var(--accent);
+  border-bottom: 1px solid var(--heading);
 }
 
 .entry .date {
@@ -104,20 +214,22 @@ h2 {
   color: #333;
 }
 
-.skills {
-  color: #333;
-}
-
-footer {
+footer.page-footer {
   margin-top: 3rem;
   color: var(--muted);
-  font-size: 0.85rem;
-  border-top: 1px solid var(--border);
-  padding-top: 1.5rem;
+  font-size: 0.8rem;
 }
 
-@media (max-width: 480px) {
-  .container {
-    padding: 2.5rem 1.25rem 2rem;
+@media (max-width: 640px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  main {
+    padding: 1.75rem 1.25rem;
   }
 }
